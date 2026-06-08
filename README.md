@@ -7,14 +7,14 @@ This app allows users to create, read, update, and delete notes with a clean and
 🛠️ Tech Stack
 
 Frontend:
--React (Vite)
--Axios
--React Router DOM
--Tailwind CSS
+- React (Vite)
+- Axios
+- React Router DOM
+- Tailwind CSS
 
 Backend:
--Node.js
--Express.js
--MongoDB Atlas
--Mongoose
--CORS
+- Node.js
+- Express.js
+- MongoDB Atlas
+- Mongoose
+- CORS
