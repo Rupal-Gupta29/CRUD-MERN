@@ -11,7 +11,9 @@ const Home = () => {
   async function getAllNotes() {
     try {
       setLoading(true);
-      const res = await axios.get(`${import.meta.env.VITE_NOTES_API_BASE_URL}/api/notes`);
+      const res = await axios.get(
+        `${import.meta.env.VITE_NOTES_API_BASE_URL}/api/notes`,
+      );
       setNotes(res.data.notes);
       setLoading(false);
     } catch (err) {
@@ -36,12 +38,12 @@ const Home = () => {
     }
   };
 
-  if (!notes) {
-    return <div>No notes to display.</div>;
-  }
-
   if (loading) {
     return <div>Loading...</div>;
+  }
+
+  if (!notes) {
+    return <div>No notes to display.</div>;
   }
 
   return (
