@@ -11,7 +11,7 @@ const NoteForm = ({ note }) => {
     e.preventDefault();
     try {
       const res = await axios.post(
-        `${import.meta.env.VITE_NOTES_API_BASE_URL}/create-note`,
+        `${import.meta.env.VITE_NOTES_API_BASE_URL}/api/notes/create-note`,
         {
           title,
           description,
@@ -29,7 +29,7 @@ const NoteForm = ({ note }) => {
     e.preventDefault();
     try {
       const res = await axios.put(
-        `${import.meta.env.VITE_NOTES_API_BASE_URL}/edit-note/${note._id}`,
+        `${import.meta.env.VITE_NOTES_API_BASE_URL}/api/notes/edit-note/${note._id}`,
         {
           title,
           description,

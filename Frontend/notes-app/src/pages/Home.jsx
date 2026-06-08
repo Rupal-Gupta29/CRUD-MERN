@@ -11,7 +11,7 @@ const Home = () => {
   async function getAllNotes() {
     try {
       setLoading(true);
-      const res = await axios.get(import.meta.env.VITE_NOTES_API_BASE_URL);
+      const res = await axios.get(`${import.meta.env.VITE_NOTES_API_BASE_URL}/api/notes`);
       setNotes(res.data.notes);
       setLoading(false);
     } catch (err) {
@@ -27,7 +27,7 @@ const Home = () => {
   const handleDelete = async (id) => {
     try {
       const res = await axios.delete(
-        `${import.meta.env.VITE_NOTES_API_BASE_URL}/delete-note/${id}`,
+        `${import.meta.env.VITE_NOTES_API_BASE_URL}/api/notes/delete-note/${id}`,
       );
       let updatedNoteList = notes.filter((note) => note._id !== id);
       setNotes(updatedNoteList);
